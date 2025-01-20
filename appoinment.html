@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Make Appointment</h1>
+            <nav>
+                <button class="nav-btn active" data-tab="patients">Patients</button>
+                <button class="nav-btn" data-tab="appointments">Appointments</button>
+                <button class="nav-btn" data-tab="doctors">Doctors</button>
+            </nav>
+        </header>
+
+        <main>
+            <div id="patients" class="tab-content active">
+                <div class="header-actions">
+                    <h2>Patients List</h2>
+                    <button class="add-btn" onclick="showAddPatientModal()">Add Patient</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Contact</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="patients-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="appointments" class="tab-content">
+                <div class="header-actions">
+                    <h2>Appointments List</h2>
+                    <button class="add-btn" onclick="showAddAppointmentModal()">Add Appointment</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Patient</th>
+                                <th>Doctor</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="appointments-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="doctors" class="tab-content">
+                <div class="header-actions">
+                    <h2>Doctors List</h2>
+                    <button class="add-btn" onclick="showAddDoctorModal()">Add Doctor</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Specialization</th>
+                                <th>Contact</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="doctors-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <!-- Modal Templates -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="modal-body"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
